@@ -1,12 +1,12 @@
 annotations:
   artifacthub.io/changes: |
-    - kind: added
-      description: Option to set appProtocol for Argocd server https service port
+    - kind: changed
+      description: Set argo-cd parent repo as first source in Chart.yaml, so renovate can pull changelogs from parent repo.
   artifacthub.io/signKey: |
     fingerprint: 2B8F22F57260EFA67BE1C5824B11F800CD9D2252
     url: https://argoproj.github.io/argo-helm/pgp_keys.asc
 apiVersion: v2
-appVersion: v2.7.3
+appVersion: v3.3.8
 description: A Helm chart for Argo CD, a declarative, GitOps continuous delivery tool for Kubernetes.
 home: https://github.com/argoproj/argo-helm
 icon: https://argo-cd.readthedocs.io/en/stable/assets/logo.png
@@ -14,16 +14,16 @@ keywords:
   - argoproj
   - argocd
   - gitops
-kubeVersion: '>=1.22.0-0'
+kubeVersion: '>=1.25.0-0'
 maintainers:
   - name: argoproj
     url: https://argoproj.github.io/
 name: argo-cd
 sources:
-  - https://github.com/argoproj/argo-helm/tree/main/charts/argo-cd
   - https://github.com/argoproj/argo-cd
-version: 5.34.6
+  - https://github.com/argoproj/argo-helm/tree/main/charts/argo-cd
+version: 9.5.4
 dependencies:
   - name: argo-cd
-    version: "5.34.6"
+    version: "9.5.4"
     repository: "https://argoproj.github.io/argo-helm"
